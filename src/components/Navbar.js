@@ -1,13 +1,11 @@
 import React from "react";
-import './component.css';
+import "./component.css";
 import { useNavigate } from "react-router-dom";
 
 export default function () {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
-    
     <div>
-      
       <nav className="navbar navbar-expand-lg navbar-dark  upperbar">
         <div className="container">
           <a className="navbar-brand" href="#">
@@ -27,42 +25,41 @@ export default function () {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item ">
-                <a className="nav-link" href="#"  onClick={() => navigate('/users')}>
-                  Home 
+                <a
+                  className="nav-link"
+                  href="#"
+                  onClick={() => navigate("/users")}
+                >
+                  Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#"  onClick={() => navigate('/users/add')}>
+                <a
+                  className="nav-link"
+                  href="#"
+                  onClick={() => navigate("/users/add")}
+                >
                   AddUser
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#"  onClick={() => navigate('/users/edit/:id')}>
-                 EditUser
-                </a>
-              </li>
-          
             </ul>
           </div>
         </div>
       </nav>
-     
-      
     </div>
-    
   );
 }
 Table_head();
 
-function Table_head(){
-  return(
-    <thead className='handletablehead'>
-          <tr>
-            <th scope="col">UserId</th>
-            <th scope="col">Name</th>
-            <th scope="col">EmailId</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-  )
+function Table_head() {
+  return (
+    <thead className="handletablehead">
+      <tr>
+        <th scope="col">UserId</th>
+        <th scope="col">Name</th>
+        <th scope="col">EmailId</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+  );
 }

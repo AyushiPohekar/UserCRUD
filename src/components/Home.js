@@ -1,36 +1,46 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {  faEye, faPenToSquare, faTrash } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEye,
+  faPenToSquare,
+  faTrash,
+} from "@fortawesome/free-solid-svg-icons";
 import { Navigate, useNavigate } from "react-router-dom";
+import "./component.css";
 
-export default function Home({id,user, deletebutton}) {
-    
-    const navigate=useNavigate();
+export default function Home({ id, user, deletebutton }) {
+  const navigate = useNavigate();
   return (
-    <div className="container">
-      <table class="table table-stripped text-center handletable">
-        {/* <thead className='handletablehead'>
-          <tr>
-            <th scope="col">UserId</th>
-            <th scope="col">Name</th>
-            <th scope="col">EmailId</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead> */}
-        <tbody>
-          <tr>
-            <th scope="row">{user.id}</th>
-            <td>{user.first_name+"  "+user.last_name}</td>
-            <td>{user.email}</td>
-            <td className="handletableicons">
-                <td><FontAwesomeIcon icon={faEye} onClick={()=>navigate(`/users/${id}`)} /></td>
-                <td><FontAwesomeIcon icon={faPenToSquare} onClick={() => navigate(`/users/edit/${id}`)}/></td>
-                <td>{ deletebutton}</td>
-                </td>
-           
-          </tr>
-        </tbody>
-      </table>
+    <div class="container Home">
+      <div class="row Homerow">
+        <div class="col-sm">
+          {" "}
+          {user.id + ":"}
+          <span className="name">
+            {user.first_name + "  " + user.last_name}
+          </span>
+        </div>
+        <div class="col-sm">{user.email}</div>
+        <div class="col-sm Homebuttons">
+          <button
+            type="button"
+            class="btn btn-primary"
+            onClick={() => navigate(`/users/${id}`)}
+          >
+            View <FontAwesomeIcon icon={faEye} />
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-success"
+            onClick={() => navigate(`/users/edit/${id}`)}
+          >
+            Edit <FontAwesomeIcon icon={faPenToSquare} />
+          </button>
+
+          {deletebutton}
+        </div>
+      </div>
     </div>
   );
 }

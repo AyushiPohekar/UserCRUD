@@ -1,23 +1,100 @@
-.upperbar
-{
-    background-color: #311D3F;
-    color: white;
-    padding: 20px 0px;
+.upperbar {
+  background-color: #311d3f;
+  color: white;
+  padding: 20px 0px;
 }
 
-.handletable{
+/* Home */
 
-    margin-top: 60px;
-    
+.Home {
+  margin: 3rem 3rem;
 }
-.handletablehead{
-    background-color: #88304E;
-    box-sizing: 2px solid black;
+.Homebuttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
-.handletableicons{
-    display: flex;
-    justify-content: center ;
-    justify-content: space-around ;
-    
-  
+.name {
+  padding-left: 2rem;
+}
+.Homerow {
+  background-color: #371b58;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: #4c3575;
+  color: white;
+}
+
+/* AddUser */
+.Backbutton {
+  margin-top: 2rem;
+  margin-left: 7rem;
+  padding: 5px 25px;
+}
+.buttonIcon {
+  padding-right: 8px;
+}
+.Adduser {
+  width: 50%;
+  margin: 3% 27%;
+  background-color: #371b58;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 20px;
+  box-shadow: 20px black;
+}
+.AdduserInfo {
+  padding: 1rem;
+}
+/* #firstName{
+    width:100%;
+    align-items: center;
+} */
+
+.Addbutton {
+  margin-bottom: 1rem;
+  width: 60%;
+  font-weight: 700;
+  word-spacing: 1.5rem;
+}
+.buttonAdd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Adduserlabel {
+  color: white;
+  font-weight: 700;
+}
+
+/* userdetails */
+.Userdetailcard {
+  width: 30rem;
+  margin: 5% 0;
+  padding: 2rem 2rem;
+  border-radius: 20px;
+  box-shadow: 50px black;
+}
+.userdetail {
+  display: flex;
+  justify-content: center;
+}
+.Userdetailbody {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.Userdetailcontent {
+  font-weight: 600;
+  text-align: center;
+  word-spacing: 1rem;
+  background-color: #dfd9eb;
+  padding: 1rem;
+}
+.Userdetailinfo {
+  text-align: center;
+  padding: 1rem;
 }

@@ -19,6 +19,8 @@ export default function UserList() {
      
   };
 
+
+
   // useEffect(() => getUsers(), []);
    //delete first refresh later
    const deleteUsers = (id) => {
@@ -33,12 +35,16 @@ export default function UserList() {
 
   return(
   <div className="User-List">
-  {userlist.map((ur)=>(<Home key={ur.id} user={ur}  id={ur.id}
+    
+  {userlist.map((ur)=>(<Home key={ur.id} user={ur}  id={ur.id} 
    deletebutton={
-    // <button onClick={()=>deleteUsers(ur.id)}>Delete</button>
-    <FontAwesomeIcon icon={faTrash} onClick={()=>deleteUsers(ur.id)}/>
+    <button type="button" class="btn btn-danger"  onClick={()=>deleteUsers(ur.id)}>
+    Delete <FontAwesomeIcon icon={faTrash}/>
+  </button>
+    
    }
   
   />))}
+
   </div>); 
 }
