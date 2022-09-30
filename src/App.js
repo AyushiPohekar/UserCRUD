@@ -22,7 +22,7 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/" element={<welcome />} />
+          <Route path="/" element={<Navigate replace to="/users" />} />
           <Route path="/users" element={<UserList />}></Route>
           <Route path="/users/:id" element={<UserDetails />}></Route>
           <Route path="/users/add" element={<AddUser />}></Route>
