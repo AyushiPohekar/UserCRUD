@@ -1,0 +1,23 @@
+.upperbar
+{
+    background-color: #311D3F;
+    color: white;
+    padding: 20px 0px;
+}
+
+.handletable{
+
+    margin-top: 60px;
+    
+}
+.handletablehead{
+    background-color: #88304E;
+    box-sizing: 2px solid black;
+}
+.handletableicons{
+    display: flex;
+    justify-content: center ;
+    justify-content: space-around ;
+    
+  
+}
